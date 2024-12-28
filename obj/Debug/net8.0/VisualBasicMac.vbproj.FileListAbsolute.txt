@@ -1,0 +1,4 @@
+E:\Visual Basic Projects\VisualBasicMac\obj\Debug\net8.0\VisualBasicMac.GeneratedMSBuildEditorConfig.editorconfig
+E:\Visual Basic Projects\VisualBasicMac\obj\Debug\net8.0\VisualBasicMac.AssemblyInfoInputs.cache
+E:\Visual Basic Projects\VisualBasicMac\obj\Debug\net8.0\VisualBasicMac.AssemblyInfo.vb
+E:\Visual Basic Projects\VisualBasicMac\obj\Debug\net8.0\VisualBasicMac.vbproj.CoreCompileInputs.cache
