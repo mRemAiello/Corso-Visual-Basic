@@ -1,0 +1,29 @@
+### VisualStudioCode ###
+.vscode/*
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
+
+# App
+MauiApp1/bin
+MauiApp1/obj
+MauiApp1/log
+MauiApp1/%LOCALAPPDATA%
+
+#
+bin
+obj

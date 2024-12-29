@@ -2,3 +2,4 @@ E:\Visual Basic Projects\VisualBasicMac\obj\Debug\net8.0\VisualBasicMac.Generate
 E:\Visual Basic Projects\VisualBasicMac\obj\Debug\net8.0\VisualBasicMac.AssemblyInfoInputs.cache
 E:\Visual Basic Projects\VisualBasicMac\obj\Debug\net8.0\VisualBasicMac.AssemblyInfo.vb
 E:\Visual Basic Projects\VisualBasicMac\obj\Debug\net8.0\VisualBasicMac.vbproj.CoreCompileInputs.cache
+E:\Visual Basic Projects\VisualBasicMac\obj\Debug\net8.0\VisualBasicMac.sourcelink.json
