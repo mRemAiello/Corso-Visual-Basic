@@ -3,3 +3,13 @@ E:\Visual Basic Projects\VisualBasicMac\obj\Debug\net8.0\VisualBasicMac.Assembly
 E:\Visual Basic Projects\VisualBasicMac\obj\Debug\net8.0\VisualBasicMac.AssemblyInfo.vb
 E:\Visual Basic Projects\VisualBasicMac\obj\Debug\net8.0\VisualBasicMac.vbproj.CoreCompileInputs.cache
 E:\Visual Basic Projects\VisualBasicMac\obj\Debug\net8.0\VisualBasicMac.sourcelink.json
+E:\Visual Basic Projects\VisualBasicMac\bin\Debug\net8.0\VisualBasicMac.exe
+E:\Visual Basic Projects\VisualBasicMac\bin\Debug\net8.0\VisualBasicMac.deps.json
+E:\Visual Basic Projects\VisualBasicMac\bin\Debug\net8.0\VisualBasicMac.runtimeconfig.json
+E:\Visual Basic Projects\VisualBasicMac\bin\Debug\net8.0\VisualBasicMac.dll
+E:\Visual Basic Projects\VisualBasicMac\bin\Debug\net8.0\VisualBasicMac.pdb
+E:\Visual Basic Projects\VisualBasicMac\obj\Debug\net8.0\VisualBasicMac.dll
+E:\Visual Basic Projects\VisualBasicMac\obj\Debug\net8.0\refint\VisualBasicMac.dll
+E:\Visual Basic Projects\VisualBasicMac\obj\Debug\net8.0\VisualBasicMac.pdb
+E:\Visual Basic Projects\VisualBasicMac\obj\Debug\net8.0\VisualBasicMac.genruntimeconfig.cache
+E:\Visual Basic Projects\VisualBasicMac\obj\Debug\net8.0\ref\VisualBasicMac.dll

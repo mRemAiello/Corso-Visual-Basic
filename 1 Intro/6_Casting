@@ -1,0 +1,14 @@
+Module Program
+    Sub Main()
+        Dim numeroStringa As String = "123"
+        Dim numeroIntero As Integer = Convert.ToInt32(numeroStringa)
+
+        Dim numeroDecimale As Double = 45.67
+        Dim numeroInteroDaDecimale As Integer = CType(numeroDecimale, Integer)
+
+        Console.WriteLine("Da stringa a intero: " & numeroIntero)
+        Console.WriteLine("Da double a intero: " & numeroInteroDaDecimale)
+
+        Console.ReadKey()
+    End Sub
+End Module

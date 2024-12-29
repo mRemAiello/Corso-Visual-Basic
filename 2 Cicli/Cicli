@@ -1,0 +1,42 @@
+Module Program
+    Sub Main()
+        ' Ciclo For
+        Console.WriteLine("Ciclo For:")
+        For i As Integer = 1 To 5
+            Console.WriteLine(i)
+        Next
+
+        ' Ciclo While
+        Console.WriteLine("Ciclo While:")
+        Dim j As Integer = 1
+        While j <= 5
+            Console.WriteLine(j)
+            j += 1
+        End While
+
+        ' Ciclo Do While
+        Console.WriteLine("Ciclo Do While:")
+        Dim k As Integer = 1
+        Do While k <= 5
+            Console.WriteLine(k)
+            k += 1
+        Loop
+
+        ' Ciclo Do Until
+        Console.WriteLine("Ciclo Do Until:")
+        Dim l As Integer = 1
+        Do Until l > 5
+            Console.WriteLine(l)
+            l += 1
+        Loop
+
+        ' Ciclo For Each
+        Console.WriteLine("Ciclo For Each:")
+        Dim numeri As Integer() = {1, 2, 3, 4, 5}
+        For Each numero As Integer In numeri
+            Console.WriteLine(numero)
+        Next
+
+        Console.ReadKey()
+    End Sub
+End Module
