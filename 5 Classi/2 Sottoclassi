@@ -1,0 +1,53 @@
+Module Program
+    Sub Main()
+        ' Creazione di un'istanza della classe Studente
+        Dim studente1 As New Studente("Luigi", "Verdi", 20, "Informatica")
+
+        ' Utilizzo dei metodi della classe Studente e della classe base Persona
+        Console.WriteLine("Nome completo: " & studente1.GetNomeCompleto())
+        Console.WriteLine("Età: " & studente1.Età)
+        Console.WriteLine("Corso di studi: " & studente1.CorsoDiStudi)
+
+        ' Modifica del corso di studi
+        studente1.CorsoDiStudi = "Ingegneria"
+        Console.WriteLine("Nuovo corso di studi: " & studente1.CorsoDiStudi)
+
+        Console.ReadKey()
+    End Sub
+End Module
+
+' Classe base Persona
+Public Class Persona
+    ' Campi privati
+    Private nome As String
+    Private cognome As String
+
+    ' Proprietà pubblica per l'età
+    Public Property Età As Integer
+
+    ' Costruttore
+    Public Sub New(nome As String, cognome As String, età As Integer)
+        Me.nome = nome
+        Me.cognome = cognome
+        Me.Età = età
+    End Sub
+
+    ' Metodo per ottenere il nome completo
+    Public Function GetNomeCompleto() As String
+        Return nome & " " & cognome
+    End Function
+End Class
+
+' Sottoclasse Studente che eredita dalla classe Persona
+Public Class Studente
+    Inherits Persona
+
+    ' Proprietà per il corso di studi
+    Public Property CorsoDiStudi As String
+
+    ' Costruttore della sottoclasse Studente
+    Public Sub New(nome As String, cognome As String, età As Integer, corsoDiStudi As String)
+        MyBase.New(nome, cognome, età)
+        Me.CorsoDiStudi = corsoDiStudi
+    End Sub
+End Class

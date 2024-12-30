@@ -1,0 +1,40 @@
+Module Program
+    Sub Main()
+        ' Esempio di funzione che non accetta parametri e non restituisce valori
+        Saluta()
+
+        ' Esempio di funzione che accetta parametri ma non restituisce valori
+        StampaMessaggio("Benvenuto in VB.NET")
+
+        ' Esempio di funzione che accetta parametri e restituisce un valore
+        Dim somma As Integer = SommaNumeri(5, 10)
+        Console.WriteLine("La somma è: " & somma)
+
+        ' Esempio di funzione che restituisce un valore senza parametri
+        Dim numeroCasuale As Integer = GeneraNumeroCasuale()
+        Console.WriteLine("Numero casuale: " & numeroCasuale)
+
+        Console.ReadKey()
+    End Sub
+
+    ' Funzione che non accetta parametri e non restituisce valori
+    Sub Saluta()
+        Console.WriteLine("Ciao!")
+    End Sub
+
+    ' Funzione che accetta parametri e non restituisce valori
+    Sub StampaMessaggio(messaggio As String)
+        Console.WriteLine(messaggio)
+    End Sub
+
+    ' Funzione che accetta parametri e restituisce un valore
+    Function SommaNumeri(a As Integer, b As Integer) As Integer
+        Return a + b
+    End Function
+
+    ' Funzione che restituisce un valore senza parametri
+    Function GeneraNumeroCasuale() As Integer
+        Dim random As New Random()
+        Return random.Next(1, 101) ' Genera un numero casuale tra 1 e 100
+    End Function
+End Module

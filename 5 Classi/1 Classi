@@ -1,0 +1,37 @@
+Module Program
+    Sub Main()
+        ' Creazione di un'istanza della classe Persona
+        Dim persona1 As New Persona("Mario", "Rossi", 30)
+
+        ' Utilizzo dei metodi della classe
+        Console.WriteLine("Nome completo: " & persona1.GetNomeCompleto())
+        Console.WriteLine("Età: " & persona1.Età)
+
+        ' Modifica dell'età usando la proprietà
+        persona1.Età = 31
+        Console.WriteLine("Nuova età: " & persona1.Età)
+
+        Console.ReadKey()
+    End Sub
+End Module
+
+Public Class Persona
+    ' Campi privati
+    Private nome As String
+    Private cognome As String
+
+    ' Proprietà pubblica per l'età
+    Public Property Età As Integer
+
+    ' Costruttore
+    Public Sub New(nome As String, cognome As String, età As Integer)
+        Me.nome = nome
+        Me.cognome = cognome
+        Me.Età = età
+    End Sub
+
+    ' Metodo per ottenere il nome completo
+    Public Function GetNomeCompleto() As String
+        Return nome & " " & cognome
+    End Function
+End Class
