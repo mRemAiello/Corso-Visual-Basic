@@ -1,3 +1,5 @@
+' https://learn.microsoft.com/en-us/dotnet/visual-basic/programming-guide/program-structure/naming-conventions
+
 Module Program
     Sub Main()
         ' Dichiarazione di variabili di diversi tipi
@@ -13,6 +15,9 @@ Module Program
         Console.WriteLine("Altezza: " & altezza & " metri")
         Console.WriteLine("È uno studente? " & isStudente)
         Console.WriteLine("Carattere iniziale del nome: " & carattereIniziale)
+
+        ' Riassegnazione della variabile
+        nome = "Luigi"
 
         ' Mantiene la finestra aperta fino alla pressione di un tasto
         Console.ReadKey()

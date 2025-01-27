@@ -1,0 +1,14 @@
+Module Program
+    Sub Main()
+
+        ' Prendi input da tastiera
+        Dim input As String = Console.ReadLine()
+
+        ' Converti l'input in un Integer
+        Dim numero As Integer = Integer.Parse(input)
+
+        ' Oppure utilizza Convert.ToInt32
+        ' Dim numero As Integer = Convert.ToInt32(input)
+
+    End Sub
+End Module
