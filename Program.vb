@@ -1,18 +1,33 @@
 Module Program
     Sub Main()
-        Dim numero1 As Integer = 10
-        Dim numero2 As Integer = 3
+        Console.Write("Inserisci la tua età: ")
+        Dim età As Integer = Convert.ToInt32(Console.ReadLine())
 
-        Dim somma As Integer = numero1 + numero2
-        Dim differenza As Integer = numero1 - numero2
-        Dim prodotto As Integer = numero1 * numero2
-        Dim divisione As Integer = numero1 / numero2
-        Dim resto As Integer = numero1 Mod numero2
+        If età >= 18 And età <= 65 Then
+            Console.WriteLine("Sei maggiorenne.")
+        ElseIf età >= 14 And età < 18 Then
+            Console.WriteLine("Sei minorenne.")
+        ElseIf età < 14 Or età > 65 Then
+            Console.WriteLine("Sei un bambino o un anziano.")
+        End If
 
-        Console.WriteLine("Somma: " & somma)
-        Console.WriteLine("Differenza: " & differenza)
-        Console.WriteLine("Prodotto: " & prodotto)
-        Console.WriteLine("Divisione: " & divisione)
-        Console.WriteLine("Resto: " & resto)
+        ' Verifica se a è uguale a b
+        If a = b Then
+            Console.WriteLine("a è uguale a b")
+            ' Azione da eseguire se a è uguale a b
+        End If
+
+        ' Verifica se a è diverso da b
+        If a <> b Then
+            Console.WriteLine("a è diverso a b")
+            ' Azione da eseguire se a è diverso da b
+        End If
+
+        If a Mod 2 = 0 Then
+            ' Azione da eseguire se a è pari
+            Console.WriteLine("a è pari")
+        End If
+
+        Console.ReadKey()
     End Sub
 End Module
