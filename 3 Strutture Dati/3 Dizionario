@@ -1,15 +1,3 @@
-Module Program
-    Sub Main()
-        ' Lista (List)
-        Dim listaNumeri As New List(Of Integer)()
-        listaNumeri.Add(1)
-        listaNumeri.Add(2)
-        listaNumeri.Add(3)
-        Console.WriteLine("Lista:")
-        For Each numero In listaNumeri
-            Console.WriteLine(numero)
-        Next
-
         ' Dizionario (Dictionary)
         Dim dizionario As New Dictionary(Of String, String)()
         dizionario.Add("Italia", "Roma")
@@ -39,14 +27,3 @@ Module Program
         While pila.Count > 0
             Console.WriteLine(pila.Pop())
         End While
-
-        ' Array
-        Dim arrayNumeri As Integer() = {1, 2, 3, 4, 5}
-        Console.WriteLine("Array:")
-        For Each numero In arrayNumeri
-            Console.WriteLine(numero)
-        Next
-
-        Console.ReadKey()
-    End Sub
-End Module

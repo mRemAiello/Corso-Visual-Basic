@@ -1,17 +1,17 @@
 Imports System.IO
 
-Module Program
+Module Module1
     Sub Main()
         ' Percorso del file da aprire
         Dim filePath As String = "Sample.txt"
 
         ' Controlla se il file esiste
         If File.Exists(filePath) Then
-            ' Legge tutto il contenuto del file
-            Dim fileContent As String = File.ReadAllText(filePath)
-
-            ' Stampa il contenuto del file
-            Console.WriteLine(fileContent)
+            ' Itera ogni riga del file
+            For Each line As String In File.ReadLines(filePath)
+                ' Stampa la riga corrente
+                Console.WriteLine(line)
+            Next
         Else
             Console.WriteLine("Il file non esiste.")
         End If

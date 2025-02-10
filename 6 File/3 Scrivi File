@@ -1,0 +1,25 @@
+Imports System.IO
+
+Module Module1
+    Sub Main()
+        ' Percorso del file in cui inserire le righe
+        Dim filePath As String = "Sample 2.txt"
+
+        ' Righe da aggiungere
+        Dim newLines As String() = {"Questa è la prima riga.", "Questa è la seconda riga."}
+
+        ' Controlla se il file esiste
+        If File.Exists(filePath) Then
+            ' Aggiunge le nuove righe alla fine del file
+            File.AppendAllLines(filePath, newLines)
+            Console.WriteLine("Righe aggiunte con successo.")
+        Else
+            ' Crea un nuovo file e aggiunge le righe
+            File.WriteAllLines(filePath, newLines)
+            Console.WriteLine("File creato e righe aggiunte.")
+        End If
+
+        ' Attende l'input dell'utente per chiudere la finestra della console
+        Console.ReadLine()
+    End Sub
+End Module

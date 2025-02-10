@@ -1,5 +1,6 @@
 Module Program
     Sub Main()
+        
         ' Ciclo For
         Console.WriteLine("Ciclo For:")
         For i As Integer = 1 To 5
@@ -38,5 +39,6 @@ Module Program
         Next
 
         Console.ReadKey()
+        
     End Sub
 End Module

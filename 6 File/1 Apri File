@@ -1,6 +1,6 @@
 Imports System.IO
 
-Module Program
+Module Module1
     Sub Main()
         ' Percorso del file da aprire
         Dim filePath As String = "Sample.txt"
