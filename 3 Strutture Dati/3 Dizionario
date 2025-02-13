@@ -1,29 +1,59 @@
-        ' Dizionario (Dictionary)
-        Dim dizionario As New Dictionary(Of String, String)()
-        dizionario.Add("Italia", "Roma")
-        dizionario.Add("Francia", "Parigi")
-        dizionario.Add("Germania", "Berlino")
-        Console.WriteLine("Dizionario:")
-        For Each paese In dizionario
-            Console.WriteLine(paese.Key & ": " & paese.Value)
+Module Module1
+
+    Sub Main()
+        ' Creazione di un dizionario
+        Dim dizionario As New Dictionary(Of String, String)
+
+        ' Aggiunta di elementi
+        dizionario.Add("ITA", "Italia")
+        dizionario.Add("USA", "Stati Uniti")
+        dizionario.Add("FRA", "Francia")
+
+        ' Accesso a un valore tramite la chiave
+        Dim valore As String = dizionario("ITA")
+        Console.WriteLine("Il valore associato a 'ITA' è: " & valore)
+
+        ' Verifica se una chiave esiste nel dizionario
+        If dizionario.ContainsKey("USA") Then
+            Console.WriteLine("La chiave 'USA' esiste nel dizionario.")
+        Else
+            Console.WriteLine("La chiave 'USA' non esiste nel dizionario.")
+        End If
+
+        ' Verifica se un valore esiste nel dizionario
+        If dizionario.ContainsValue("Francia") Then
+            Console.WriteLine("Il valore 'Francia' esiste nel dizionario.")
+        Else
+            Console.WriteLine("Il valore 'Francia' non esiste nel dizionario.")
+        End If
+
+        ' Modifica di un valore associato a una chiave
+        dizionario("FRA") = "Repubblica Francese"
+        Console.WriteLine("Il nuovo valore associato a 'FRA' è: " & dizionario("FRA"))
+
+        ' Rimozione di un elemento tramite la chiave
+        dizionario.Remove("USA")
+        Console.WriteLine("Rimosso l'elemento con chiave 'USA'.")
+
+        ' Tentativo di accesso a una chiave non presente
+        If dizionario.TryGetValue("USA", valore) Then
+            Console.WriteLine("Il valore associato a 'USA' è: " & valore)
+        Else
+            Console.WriteLine("La chiave 'USA' non è presente nel dizionario.")
+        End If
+
+        ' Iterazione sugli elementi del dizionario
+        Console.WriteLine("Elenco degli elementi nel dizionario:")
+        For Each kvp As KeyValuePair(Of String, String) In dizionario
+            Console.WriteLine("Chiave: " & kvp.Key & ", Valore: " & kvp.Value)
         Next
 
-        ' Coda (Queue)
-        Dim coda As New Queue(Of String)()
-        coda.Enqueue("Primo")
-        coda.Enqueue("Secondo")
-        coda.Enqueue("Terzo")
-        Console.WriteLine("Coda:")
-        While coda.Count > 0
-            Console.WriteLine(coda.Dequeue())
-        End While
+        ' Conta degli elementi nel dizionario
+        Console.WriteLine("Numero di elementi nel dizionario: " & dizionario.Count)
 
-        ' Pila (Stack)
-        Dim pila As New Stack(Of String)()
-        pila.Push("Primo")
-        pila.Push("Secondo")
-        pila.Push("Terzo")
-        Console.WriteLine("Pila:")
-        While pila.Count > 0
-            Console.WriteLine(pila.Pop())
-        End While
+        ' Pulizia del dizionario
+        dizionario.Clear()
+        Console.WriteLine("Dizionario svuotato. Numero di elementi: " & dizionario.Count)
+    End Sub
+
+End Module

@@ -1,0 +1,22 @@
+Esercizi su Queue:
+
+    Esercizio 1: Simulazione di una Coda
+        Crea una coda di stringhe.
+        Aggiungi 5 persone a una coda per un servizio (es. nomi di persone in attesa di essere servite).
+        Visualizza chi è la prossima persona a essere servita, quindi rimuovila dalla coda.
+        Servi tutte le persone fino a quando la coda è vuota utilizzando un ciclo While.
+
+    Esercizio 2: Gestione di Numeri in una Coda
+        Crea una coda di numeri interi.
+        Aggiungi 10 numeri casuali alla coda.
+        Estrai e stampa solo i numeri dispari utilizzando un ciclo For Each.
+
+    Esercizio 3: Simulazione di una Linea di Produzione
+        Simula una linea di produzione utilizzando una coda.
+        Ogni prodotto è rappresentato da una stringa.
+        Aggiungi 7 prodotti alla coda.
+        Utilizza un ciclo For per simulare il processo di produzione e rimuovere i prodotti uno alla volta.
+
+    Esercizio 4: Fibonacci con Coda
+        Utilizza una coda per generare i primi 10 numeri della sequenza di Fibonacci.
+        Aggiungi i primi due numeri (0 e 1) alla coda e utilizza un ciclo per generare i successivi, aggiornando la coda a ogni iterazione.

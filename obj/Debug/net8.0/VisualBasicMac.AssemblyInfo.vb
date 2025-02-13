@@ -15,7 +15,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("VisualBasicMac"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9fc904b7583ccf4acbc8b15a2e3a865e675a84e9"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9f99acf9db8f1d62722b11fc8c87a406328d78b0"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("VisualBasicMac"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("VisualBasicMac"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")> 

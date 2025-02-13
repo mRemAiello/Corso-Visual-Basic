@@ -1,0 +1,41 @@
+Module Module1
+
+    Sub Main()
+        ' Creazione di una coda
+        Dim coda As New Queue(Of String)
+
+        ' Aggiunta di elementi alla coda (Enqueue)
+        coda.Enqueue("Primo elemento")
+        coda.Enqueue("Secondo elemento")
+        coda.Enqueue("Terzo elemento")
+
+        ' Accesso all'elemento in testa alla coda senza rimuoverlo (Peek)
+        Dim elementoInTesta As String = coda.Peek()
+        Console.WriteLine("Elemento in testa alla coda: " & elementoInTesta)
+
+        ' Rimozione dell'elemento in testa alla coda (Dequeue)
+        Dim elementoRimosso As String = coda.Dequeue()
+        Console.WriteLine("Elemento rimosso dalla coda: " & elementoRimosso)
+
+        ' Verifica se la coda contiene un certo elemento
+        If coda.Contains("Secondo elemento") Then
+            Console.WriteLine("La coda contiene 'Secondo elemento'.")
+        Else
+            Console.WriteLine("La coda non contiene 'Secondo elemento'.")
+        End If
+
+        ' Iterazione sugli elementi della coda (senza rimuoverli)
+        Console.WriteLine("Elementi attualmente nella coda:")
+        For Each elemento As String In coda
+            Console.WriteLine(elemento)
+        Next
+
+        ' Conta degli elementi nella coda
+        Console.WriteLine("Numero di elementi nella coda: " & coda.Count)
+
+        ' Pulizia della coda
+        coda.Clear()
+        Console.WriteLine("Coda svuotata. Numero di elementi: " & coda.Count)
+    End Sub
+
+End Module

@@ -1,4 +1,5 @@
-In Visual Basic .NET, sia gli array che le liste (List(Of T)) sono utilizzati per memorizzare raccolte di elementi, ma presentano delle differenze significative in termini di funzionalità, flessibilità e comportamento. Ecco un confronto tra i due:
+In Visual Basic .NET, sia gli array che le liste (List(Of T)) sono utilizzati per memorizzare raccolte di elementi, 
+ma presentano delle differenze significative in termini di funzionalità, flessibilità e comportamento. Ecco un confronto tra i due:
 
 
 1. Dimensione

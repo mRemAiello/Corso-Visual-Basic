@@ -1,0 +1,41 @@
+Module Module1
+
+    Sub Main()
+        ' Creazione di uno stack
+        Dim stack As New Stack(Of String)
+
+        ' Aggiunta di elementi allo stack (Push)
+        stack.Push("Primo elemento")
+        stack.Push("Secondo elemento")
+        stack.Push("Terzo elemento")
+
+        ' Accesso all'elemento in cima allo stack senza rimuoverlo (Peek)
+        Dim elementoInCima As String = stack.Peek()
+        Console.WriteLine("Elemento in cima allo stack: " & elementoInCima)
+
+        ' Rimozione dell'elemento in cima allo stack (Pop)
+        Dim elementoRimosso As String = stack.Pop()
+        Console.WriteLine("Elemento rimosso dallo stack: " & elementoRimosso)
+
+        ' Verifica se lo stack contiene un certo elemento
+        If stack.Contains("Primo elemento") Then
+            Console.WriteLine("Lo stack contiene 'Primo elemento'.")
+        Else
+            Console.WriteLine("Lo stack non contiene 'Primo elemento'.")
+        End If
+
+        ' Iterazione sugli elementi dello stack (senza rimuoverli)
+        Console.WriteLine("Elementi attualmente nello stack:")
+        For Each elemento As String In stack
+            Console.WriteLine(elemento)
+        Next
+
+        ' Conta degli elementi nello stack
+        Console.WriteLine("Numero di elementi nello stack: " & stack.Count)
+
+        ' Pulizia dello stack
+        stack.Clear()
+        Console.WriteLine("Stack svuotato. Numero di elementi: " & stack.Count)
+    End Sub
+
+End Module

@@ -1,0 +1,20 @@
+Esercizi su Stack:
+
+    Esercizio 1: Creazione e Manipolazione di uno Stack
+        Crea uno stack di stringhe.
+        Aggiungi 5 elementi allo stack.
+        Visualizza l'elemento in cima senza rimuoverlo.
+        Rimuovi e stampa tutti gli elementi dallo stack utilizzando un ciclo While fino a quando lo stack non è vuoto.
+
+    Esercizio 2: Verifica di Palindromo
+        Scrivi una funzione che utilizzi uno stack per verificare se una stringa è un palindromo (es. "anna").
+        Confronta la stringa originale con la versione inversa ottenuta estraendo gli elementi dallo stack.
+
+    Esercizio 3: Bilanciamento delle Parentesi
+        Crea un programma che utilizzi uno stack per verificare se una sequenza di parentesi è bilanciata (es. "(())" è bilanciata, mentre "(()" non lo è).
+        Utilizza un ciclo For per esaminare ogni carattere della stringa.
+
+    Esercizio 4: Gestione di Numeri Interi
+        Crea uno stack di numeri interi.
+        Aggiungi 10 numeri casuali allo stack.
+        Estrai ogni elemento e stampa solo quelli pari, utilizzando un ciclo For Each.
