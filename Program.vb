@@ -1,56 +1,59 @@
-Module Program
+Module Module1
+
     Sub Main()
+        ' Creazione di un dizionario
+        Dim dizionario As New Dictionary(Of String, String)
 
-        ' Creazione di una lista (List) di interi
-        Dim listaNumeri As New List(Of Integer)()
+        ' Aggiunta di elementi
+        dizionario.Add("USA", "Stati Uniti")
+        dizionario.Add("FRA", "Francia")
+        dizionario.Add("ITA", "Italia")
 
-        ' Aggiunta di elementi alla lista
-        listaNumeri.Add(1)
-        listaNumeri.Add(2)
-        listaNumeri.Add(3)
+        ' Accesso a un valore tramite la chiave
+        Dim valore As String = dizionario("ITA")
+        Console.WriteLine("Il valore associato a 'ITA' è: " & valore)
 
-        ' Aggiunta di più elementi in una volta
-        listaNumeri.AddRange(New Integer() {4, 5, 6})
+        ' Verifica se una chiave esiste nel dizionario
+        If dizionario.ContainsKey("USA") Then
+            Console.WriteLine("La chiave 'USA' esiste nel dizionario.")
+        Else
+            Console.WriteLine("La chiave 'USA' non esiste nel dizionario.")
+        End If
 
-        ' Inserimento di un elemento in una posizione specifica
-        listaNumeri.Insert(0, 0)
+        ' Verifica se un valore esiste nel dizionario
+        If dizionario.ContainsValue("Francia") Then
+            Console.WriteLine("Il valore 'Francia' esiste nel dizionario.")
+        Else
+            Console.WriteLine("Il valore 'Francia' non esiste nel dizionario.")
+        End If
 
-        ' Rimozione di un elemento specifico
-        listaNumeri.Remove(3)
-        listaNumeri.Remove(5)
+        ' Modifica di un valore associato a una chiave
+        dizionario("FRA") = "Repubblica Francese"
+        Console.WriteLine("Il nuovo valore associato a 'FRA' è: " & dizionario("FRA"))
 
-        ' Rimozione dell'elemento in una posizione specifica
-        listaNumeri.RemoveAt(0)
+        ' Rimozione di un elemento tramite la chiave
+        dizionario.Remove("USA")
+        Console.WriteLine("Rimosso l'elemento con chiave 'USA'.")
 
-        ' Controllo se un elemento è presente nella lista
-        Dim contiene As Boolean = listaNumeri.Contains(5)
-        Console.WriteLine("La lista contiene il numero 5? " & contiene)
+        ' Tentativo di accesso a una chiave non presente
+        If dizionario.TryGetValue("USA", valore) Then
+            Console.WriteLine("Il valore associato a 'USA' è: " & valore)
+        Else
+            Console.WriteLine("La chiave 'USA' non è presente nel dizionario.")
+        End If
 
-        ' Trova l'indice di un elemento
-        Dim indice As Integer = listaNumeri.IndexOf(5)
-        Console.WriteLine("Indice del numero 5: " & indice)
-
-        ' Ordinamento della lista
-        listaNumeri.Sort()
-
-        ' Inversione dell'ordine della lista
-        listaNumeri.Reverse()
-
-        ' Stampa degli elementi della lista
-        Console.WriteLine("Lista dopo modifiche:")
-        For Each numero In listaNumeri
-            Console.WriteLine(numero)
+        ' Iterazione sugli elementi del dizionario
+        Console.WriteLine("Elenco degli elementi nel dizionario:")
+        For Each kvp As KeyValuePair(Of String, String) In dizionario
+            Console.WriteLine("Chiave: " & kvp.Key & ", Valore: " & kvp.Value)
         Next
 
-        ' Ottiene il numero di elementi nella lista
-        Console.WriteLine("Numero di elementi nella lista: " & listaNumeri.Count)
+        ' Conta degli elementi nel dizionario
+        Console.WriteLine("Numero di elementi nel dizionario: " & dizionario.Count)
 
-        ' Accesso a un elemento specifico
-        Console.WriteLine("Elemento alla posizione 2: " & listaNumeri(2))
-
-        ' Cancella tutti gli elementi della lista
-        listaNumeri.Clear()
-        Console.WriteLine("La lista è vuota? " & (listaNumeri.Count = 0))
-
+        ' Pulizia del dizionario
+        dizionario.Clear()
+        Console.WriteLine("Dizionario svuotato. Numero di elementi: " & dizionario.Count)
     End Sub
+
 End Module
