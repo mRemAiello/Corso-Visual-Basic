@@ -1,13 +1,17 @@
 Module Program
     Sub Main()
         ' Esempio di funzione che non accetta parametri e non restituisce valori
-        Saluta()
+        ' Saluta()
 
         ' Esempio di funzione che accetta parametri ma non restituisce valori
-        StampaMessaggio("Benvenuto in VB.NET")
+        Dim messaggio as String = "Benvenuto in VB.NET"
+        StampaMessaggio(messaggio)
+        Console.WriteLine(messaggio)
 
         ' Esempio di funzione che accetta parametri e restituisce un valore
-        Dim somma As Integer = SommaNumeri(5, 10)
+        Dim a as Integer = 5
+        Dim b as Integer = 10
+        Dim somma As Integer = SommaNumeri(a, b)
         Console.WriteLine("La somma è: " & somma)
 
         ' Esempio di funzione che restituisce un valore senza parametri

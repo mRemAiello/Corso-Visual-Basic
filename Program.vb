@@ -1,59 +1,62 @@
-Module Module1
-
+Module Program
     Sub Main()
-        ' Creazione di un dizionario
-        Dim dizionario As New Dictionary(Of String, String)
+        ' Creazione di un'istanza della classe Studente
+        Dim studente1 As New Studente("Luigi", "Verdi", 20, "Informatica")
 
-        ' Aggiunta di elementi
-        dizionario.Add("USA", "Stati Uniti")
-        dizionario.Add("FRA", "Francia")
-        dizionario.Add("ITA", "Italia")
+        ' Utilizzo dei metodi della classe Studente e della classe base Persona
+        Console.WriteLine("Nome completo: " & studente1.GetNomeCompleto())
+        Console.WriteLine("Età: " & studente1.Eta)
+        Console.WriteLine("Corso di studi: " & studente1.CorsoDiStudi)
 
-        ' Accesso a un valore tramite la chiave
-        Dim valore As String = dizionario("ITA")
-        Console.WriteLine("Il valore associato a 'ITA' è: " & valore)
+        ' Modifica del corso di studi
+        studente1.CorsoDiStudi = "Ingegneria"
+        Console.WriteLine("Nuovo corso di studi: " & studente1.CorsoDiStudi)
 
-        ' Verifica se una chiave esiste nel dizionario
-        If dizionario.ContainsKey("USA") Then
-            Console.WriteLine("La chiave 'USA' esiste nel dizionario.")
-        Else
-            Console.WriteLine("La chiave 'USA' non esiste nel dizionario.")
-        End If
+        Console.ReadKey()
+    End Sub
+End Module
 
-        ' Verifica se un valore esiste nel dizionario
-        If dizionario.ContainsValue("Francia") Then
-            Console.WriteLine("Il valore 'Francia' esiste nel dizionario.")
-        Else
-            Console.WriteLine("Il valore 'Francia' non esiste nel dizionario.")
-        End If
+' Classe base Persona
+Public Class Persona
 
-        ' Modifica di un valore associato a una chiave
-        dizionario("FRA") = "Repubblica Francese"
-        Console.WriteLine("Il nuovo valore associato a 'FRA' è: " & dizionario("FRA"))
+    ' Campi privati
+    Private nome As String
+    Private secondoNome as String
+    Private cognome As String
 
-        ' Rimozione di un elemento tramite la chiave
-        dizionario.Remove("USA")
-        Console.WriteLine("Rimosso l'elemento con chiave 'USA'.")
+    ' Proprietà pubblica per l'età
+    Public Property Eta As Integer
 
-        ' Tentativo di accesso a una chiave non presente
-        If dizionario.TryGetValue("USA", valore) Then
-            Console.WriteLine("Il valore associato a 'USA' è: " & valore)
-        Else
-            Console.WriteLine("La chiave 'USA' non è presente nel dizionario.")
-        End If
-
-        ' Iterazione sugli elementi del dizionario
-        Console.WriteLine("Elenco degli elementi nel dizionario:")
-        For Each kvp As KeyValuePair(Of String, String) In dizionario
-            Console.WriteLine("Chiave: " & kvp.Key & ", Valore: " & kvp.Value)
-        Next
-
-        ' Conta degli elementi nel dizionario
-        Console.WriteLine("Numero di elementi nel dizionario: " & dizionario.Count)
-
-        ' Pulizia del dizionario
-        dizionario.Clear()
-        Console.WriteLine("Dizionario svuotato. Numero di elementi: " & dizionario.Count)
+    ' Costruttore
+    Public Sub New(nome As String, cognome As String, eta As Integer)
+        Me.nome = nome
+        Me.cognome = cognome
+        Me.Eta = eta
     End Sub
 
-End Module
+    ' Metodo per ottenere il nome completo
+    Public Function GetNomeCompleto() As String
+        Return nome & " " & secondoNome & " " & cognome
+    End Function
+
+End Class
+
+' Sottoclasse Studente che eredita dalla classe Persona
+Public Class Studente
+Inherits Persona
+
+    ' Proprietà per il corso di studi
+    Public Property CorsoDiStudi As String
+
+    ' Costruttore della sottoclasse Studente
+    Public Sub New(nome As String, cognome As String, eta As Integer, corsoDiStudi As String)
+        MyBase.New(nome, cognome, eta)
+        Me.CorsoDiStudi = corsoDiStudi
+    End Sub
+
+    Public Function GetNomeCompleto() As String
+        ' Override del metodo GetNomeCompleto per la classe Studente
+        Return MyBase.GetNomeCompleto() & " - Studente di " & CorsoDiStudi
+    End Function
+
+End Class

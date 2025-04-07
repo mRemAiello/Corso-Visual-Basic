@@ -1,0 +1,35 @@
+ Classe Veicolo (classe base)
+
+    Variabili:
+
+        marca (Private, String)
+
+        modello (Public, String)
+
+        anno (Protected, Integer)
+
+    Metodi:
+
+        SetMarca(m As String) (Public): imposta il valore di marca
+
+        GetMarca() (Private): restituisce la marca
+
+        SetAnno(a As Integer) (Public): imposta il valore di anno
+
+        GetDescrizione() (Public): restituisce una stringa del tipo: "Modello: [modello], Anno: [anno], Marca: [marca]"
+        (usa GetMarca e la variabile anno all’interno)
+
+✅ Classe Auto (deriva da Veicolo)
+
+    Metodo:
+
+        MostraInfo(): stampa in console solo modello e anno
+        (non usare GetDescrizione, ma accedi direttamente alle variabili disponibili)
+
+✅ Module Main
+
+    Crea un oggetto di tipo Auto
+
+    Imposta il modello, la marca e l’anno
+
+    Mostra sia le informazioni tramite MostraInfo, sia con GetDescrizione

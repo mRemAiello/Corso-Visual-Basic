@@ -1,0 +1,67 @@
+' Classe base
+Public Class Persona
+    ' Variabile accessibile solo all'interno di questa classe
+    Private nome As String = "Mario"
+
+    ' Variabile accessibile ovunque
+    Public cognome As String = "Rossi"
+
+    ' Variabile accessibile solo in questa classe e nelle sottoclassi
+    Protected eta As Integer = 30
+
+    ' Funzione Private: accessibile solo da questa classe
+    Private Function GetNome() As String
+        Return nome
+    End Function
+
+    ' Funzione Public: accessibile ovunque
+    Public Function GetCognome() As String
+        Return cognome
+    End Function
+
+    ' Funzione Protected: accessibile solo in questa classe e nelle sottoclassi
+    Protected Function GetEta() As Integer
+        Return eta
+    End Function
+
+    ' Metodo pubblico che usa le altre funzioni per dimostrazione
+    Public Sub StampaDati()
+        Console.WriteLine("Cognome: " & GetCognome())
+
+        ' Si può accedere a Private e Protected all'interno della classe stessa
+        Console.WriteLine("Nome (da funzione Private): " & GetNome())
+        Console.WriteLine("Età (da funzione Protected): " & GetEta())
+    End Sub
+End Class
+
+' Classe derivata
+Public Class Studente
+    Inherits Persona
+
+    Public Sub StampaDatiStudente()
+        'Console.WriteLine("Nome: " & GetNome()) ' ERRORE: GetNome è Private
+
+        Console.WriteLine("Cognome (da classe derivata): " & GetCognome()) ' OK: Public
+
+        ' Possiamo accedere a funzioni e variabili Protected
+        Console.WriteLine("Età (da classe derivata): " & GetEta()) ' OK: Protected
+    End Sub
+End Class
+
+' Esempio di utilizzo
+Module Program
+    Sub Main()
+        Dim persona1 As New Persona()
+        persona1.StampaDati()
+
+        Dim studente1 As New Studente()
+        studente1.StampaDatiStudente()
+
+        ' Accesso diretto
+        Console.WriteLine("Accesso diretto al cognome: " & persona1.cognome) ' OK: Public
+        'Console.WriteLine(persona1.eta) ' ERRORE: Protected
+        'Console.WriteLine(persona1.nome) ' ERRORE: Private
+
+        Console.ReadLine()
+    End Sub
+End Module
