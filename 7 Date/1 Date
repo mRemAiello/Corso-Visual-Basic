@@ -1,0 +1,26 @@
+Module EsempioDate
+
+    Sub Main()
+        ' Ottiene la data e ora attuale
+        Dim dataAttuale As Date = Date.Now
+        Console.WriteLine("Data e ora attuale: " & dataAttuale)
+
+        ' Creare una data specifica
+        Dim dataSpecificata As New Date(2025, 12, 25, 10, 30, 0)
+        Console.WriteLine("Data specificata: " & dataSpecificata)
+
+        ' Calcolare la differenza tra due date
+        Dim differenza As TimeSpan = dataSpecificata - dataAttuale
+        Console.WriteLine("Giorni fino alla data specificata: " & differenza.Days)
+
+        ' Aggiungere giorni ad una data
+        Dim nuovaData As Date = dataAttuale.AddDays(15)
+        Console.WriteLine("Data attuale + 15 giorni: " & nuovaData)
+
+        ' Formattare una data
+        Console.WriteLine("Data formattata: " & dataAttuale.ToString("dd/MM/yyyy HH:mm:ss"))
+
+        Console.ReadLine()
+    End Sub
+
+End Module

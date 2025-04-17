@@ -1,0 +1,60 @@
+Esercizio 1 – Gestione prodotti
+
+    Crea una classe base Prodotto con le proprietà: Nome, Prezzo e Codice.
+
+    Crea due sottoclassi ProdottoAlimentare e ProdottoElettronico che estendono la classe Prodotto con proprietà 
+    aggiuntive specifiche (data scadenza per alimentari e garanzia per elettronici).
+
+    Scrivi un programma che salvi un elenco di prodotti su file in formato CSV e legga successivamente 
+    il contenuto visualizzandolo a video.
+
+
+Esercizio 2 – Registro dipendenti
+
+    Definisci una classe Dipendente con Nome, Cognome e StipendioBase.
+
+    Crea due sottoclassi Manager e Operaio, che ereditano da Dipendente, aggiungendo proprietà specifiche come 
+    Bonus (Manager) e OreLavorate (Operaio).
+
+    Scrivi un'applicazione che permetta di scrivere i dati dei dipendenti su un file di testo e di caricarli 
+    per calcolare lo stipendio totale (comprensivo di bonus o pagamento straordinari).
+
+
+Esercizio 3 – Biblioteca virtuale
+
+    Definisci una classe Libro con Titolo, Autore, AnnoPubblicazione.
+
+    Estendi la classe con due sottoclassi: LibroDigitale e LibroCartaceo. Aggiungi proprietà specifiche come 
+    DimensioneFile (digitale) e NumeroPagine (cartaceo).
+
+    Crea un programma per salvare una collezione di libri su un file XML e leggerli nuovamente visualizzandone i dettagli.
+
+
+Esercizio 4 – Animali domestici
+
+    Crea una classe base Animale con Nome e Età.
+
+    Crea sottoclassi specifiche: Cane, Gatto, Uccello, ciascuna con proprietà aggiuntive specifiche 
+    (Razza per Cane e Gatto, AperturaAlare per Uccello).
+
+    Scrivi un'applicazione che salvi le informazioni degli animali su file JSON e permetta di ricaricarle visualizzando un report dettagliato.
+
+
+Esercizio 5 – Gestione studenti universitari
+
+    Definisci una classe base Persona con Nome, Cognome e DataDiNascita.
+
+    Estendi questa classe con due sottoclassi: Studente (con proprietà aggiuntive come Matricola e CorsoDiStudi) e 
+    Professore (con Dipartimento e MateriaInsegnata).
+
+    Implementa una funzionalità per scrivere i dati su file binario e una per leggere il file restituendo un riepilogo completo delle persone registrate.
+
+
+Esercizio 6 – Veicoli e manutenzioni
+
+    Realizza una classe base Veicolo contenente Marca, Modello e AnnoProduzione.
+
+    Realizza sottoclassi Automobile e Moto, ognuna con proprietà specifiche (NumeroPorte per Automobile, Cilindrata per Moto).
+
+    Scrivi un programma che consenta la memorizzazione delle informazioni dei veicoli e delle manutenzioni effettuate 
+    (Data, Descrizione intervento), salvandole su file e leggendo successivamente i dati per mostrare uno storico completo.
