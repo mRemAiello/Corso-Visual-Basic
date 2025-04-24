@@ -1,0 +1,15 @@
+Imports System.Data.SQLite
+
+Module Module1
+    Sub Main()
+        Dim dbPath As String = "Data Source=database.db;"
+        Using conn As New SQLiteConnection(dbPath)
+            conn.Open()
+            Dim cmd As New SQLiteCommand("CREATE TABLE IF NOT EXISTS utenti (id INTEGER PRIMARY KEY, nome TEXT)", conn)
+            cmd.ExecuteNonQuery()
+            Console.WriteLine("Database e tabella creati.")
+        End Using
+        Console.WriteLine("Premi un tasto per uscire...")
+        Console.ReadKey()
+    End Sub
+End Module
