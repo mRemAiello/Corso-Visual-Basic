@@ -1,0 +1,17 @@
+Dim dati As String = "nome,cognome,email"
+Dim parti() As String = dati.Split(","c) ' Restituisce un array con {"nome", "cognome", "email"}
+
+Dim input As String = "   Mirko   "
+Dim pulita As String = input.Trim() ' Restituisce "Mirko" senza spazi iniziali e finali
+
+Dim s1 As String = "ciao"
+Dim s2 As String = "Ciao"
+Dim uguali As Boolean = String.Equals(s1, s2, StringComparison.OrdinalIgnoreCase) ' True
+
+Dim testo As String = "Programmare è divertente"
+Dim maiuscolo As String = testo.ToUpper() ' "PROGRAMMARE È DIVERTENTE"
+Dim minuscolo As String = testo.ToLower() ' "programmare è divertente"
+
+' Replace
+Dim testo2 As String = "Ciao, come stai?"
+Dim testoSostituito As String = testo2.Replace("Ciao", "Salve") ' "Salve, come stai?"
