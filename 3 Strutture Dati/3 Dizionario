@@ -2,7 +2,7 @@ Module Module1
 
     Sub Main()
         ' Creazione di un dizionario
-        Dim dizionario As New Dictionary(Of String, String)
+        Dim dizionario As New Dictionary(Of String, String)()
 
         ' Aggiunta di elementi
         dizionario.Add("ITA", "Italia")
@@ -43,6 +43,10 @@ Module Module1
         End If
 
         ' Iterazione sugli elementi del dizionario
+        ' Lista -> 0, 1, 2, 3
+        ' Dizionario scorrendo ottengo -> (chiave, valore), (chiave, valore)
+        ' Ogni singolo elemento che scorro nel dizionario mi viene dato come kvp (KeyValuePair) e contiene 2 elementi
+        ' I due elementi sono kvp.Key e kvp.Value
         Console.WriteLine("Elenco degli elementi nel dizionario:")
         For Each kvp As KeyValuePair(Of String, String) In dizionario
             Console.WriteLine("Chiave: " & kvp.Key & ", Valore: " & kvp.Value)

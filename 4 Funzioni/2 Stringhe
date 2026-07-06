@@ -15,3 +15,13 @@ Dim minuscolo As String = testo.ToLower() ' "programmare è divertente"
 ' Replace
 Dim testo2 As String = "Ciao, come stai?"
 Dim testoSostituito As String = testo2.Replace("Ciao", "Salve") ' "Salve, come stai?"
+
+' Indice
+Dim testo As String = "Ciao"
+Dim i As Integer = 2
+
+Dim carattere As Char = testo(i)
+Console.WriteLine(carattere)   ' Output: a
+
+' Length
+Dim lunghezza As Integer = Len(testo)
