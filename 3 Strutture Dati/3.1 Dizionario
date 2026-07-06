@@ -1,0 +1,138 @@
+# Esercizi Visual Basic: Dizionari
+
+## Regole consigliate
+- Usa `Dictionary(Of TKey, TValue)`.
+- Prima di accedere a una chiave, verifica la sua presenza.
+- Stampa sempre i risultati in modo chiaro.
+
+---
+
+## Parte A - Dizionario (base)
+
+### 1) Rubrica nomi e numeri
+Crea un dizionario che associa nome -> numero di telefono.
+Inserisci almeno 5 contatti e stampa tutta la rubrica.
+
+Bonus: cerca un contatto specifico inserendo il nome da tastiera.
+
+### 2) Voti studenti
+Crea un dizionario studente -> voto.
+Inserisci alcuni studenti e mostra:
+- il voto di uno studente scelto,
+- il numero totale di studenti registrati.
+
+### 3) Capitale per nazione
+Crea un dizionario nazione -> capitale.
+Permetti all'utente di inserire una nazione e stampa la capitale.
+
+Bonus: gestisci il caso in cui la nazione non esista.
+
+### 4) Aggiorna valore
+Dato un dizionario prodotto -> prezzo, aggiorna il prezzo di un prodotto esistente.
+
+Bonus: se il prodotto non esiste, aggiungilo.
+
+### 5) Rimozione chiave
+Da un dizionario film -> anno, rimuovi un film scelto dall'utente e stampa il dizionario aggiornato.
+
+---
+
+## Parte B - Dizionario (intermedio)
+
+### 6) Conteggio frequenze lettere
+Data una parola, conta quante volte compare ogni lettera usando un dizionario lettera -> conteggio.
+
+Esempio: "banana" -> b:1, a:3, n:2
+
+### 7) Conteggio frequenze parole
+Data una frase, conta quante volte appare ogni parola.
+
+Bonus: ignora differenze tra maiuscole e minuscole.
+
+### 8) Inventario magazzino
+Usa un dizionario articolo -> quantita.
+Implementa operazioni testuali:
+- carico (aumento quantita),
+- scarico (diminuzione quantita),
+- controllo disponibilita.
+
+### 9) Dizionario invertito
+Dato un dizionario nome -> citta, crea un nuovo dizionario citta -> lista di nomi.
+
+Suggerimento: piu persone possono vivere nella stessa citta.
+
+### 10) Prezzo totale carrello
+Hai un dizionario prodotto -> prezzo unitario e una lista di prodotti acquistati.
+Calcola il totale del carrello.
+
+Bonus: conta anche quante volte compare ciascun prodotto acquistato.
+
+---
+
+## Parte C - Dizionario (avanzato)
+
+### 11) Registro presenze
+Usa un dizionario data -> lista studenti presenti.
+Permetti di:
+- aggiungere presenze per una data,
+- visualizzare i presenti di una data,
+- contare presenze totali di uno studente.
+
+### 12) Statistiche voti per materia
+Usa un dizionario materia -> lista voti.
+Per ogni materia, calcola media, minimo e massimo.
+
+### 13) Mappa traduzioni
+Crea un dizionario italiano -> inglese.
+Data una frase semplice in italiano, traduci parola per parola se presente nel dizionario.
+
+Bonus: per le parole non presenti, mantieni la parola originale.
+
+### 14) Classifica punteggi
+Usa un dizionario giocatore -> punteggio.
+Mostra la classifica dal punteggio piu alto al piu basso.
+
+Bonus: gestisci pari merito.
+
+### 15) Unione di due dizionari
+Dati due dizionari con la stessa struttura, uniscili in uno solo.
+
+Regola suggerita:
+- se una chiave compare in entrambi, somma i valori,
+- altrimenti copia il valore esistente.
+
+---
+
+## Sfide finali
+
+### Sfida 1) Analisi testo completa
+Dato un testo:
+- conta frequenza parole,
+- trova la parola piu frequente,
+- mostra quante parole distinte ci sono.
+
+### Sfida 2) Registro vendite
+Usa un dizionario prodotto -> totale venduto.
+Permetti inserimento di vendite giornaliere e mostra:
+- prodotto piu venduto,
+- valore totale vendite,
+- top 3 prodotti.
+
+### Sfida 3) Menu completo dizionario
+Crea un mini gestionale testuale con menu:
+1. aggiungi chiave/valore
+2. modifica valore
+3. cerca chiave
+4. elimina chiave
+5. stampa tutto
+6. esci
+
+Obiettivo: costruire un programma robusto che gestisce input non validi.
+
+---
+
+## Extra didattico
+Per ogni esercizio, prova anche a:
+1. risolvere con diversi tipi di chiave/valore,
+2. ordinare le chiavi prima della stampa,
+3. confrontare tempi e chiarezza tra `List` e `Dictionary`.

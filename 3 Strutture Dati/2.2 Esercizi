@@ -1,0 +1,153 @@
+# Esercizi Visual Basic: Array e Liste
+
+## Regole consigliate
+- Usa `Option Strict On` quando possibile.
+- Per ogni esercizio, crea un piccolo menu o una stampa chiara dei risultati.
+- Dopo aver risolto un esercizio, prova anche la versione "Bonus".
+
+---
+
+## Parte A - Array (base)
+
+### 1) Somma degli elementi
+Dato un array di interi, calcola la somma totale.
+
+Esempio: `{3, 7, 2, 9}` -> `21`
+
+Bonus: calcola anche la media.
+
+### 2) Cerca il massimo
+Dato un array di numeri, trova il valore massimo senza usare funzioni predefinite come `Max()`.
+
+Bonus: trova anche l'indice del massimo.
+
+### 3) Conta i pari
+Dato un array di interi, conta quanti numeri pari contiene.
+
+Esempio: `{1, 2, 8, 5, 6}` -> `3`
+
+### 4) Inversione array
+Stampa gli elementi dell'array in ordine inverso.
+
+Bonus: crea un nuovo array invertito (non solo stampa).
+
+### 5) Copia con filtro
+Crea un nuovo array contenente solo i numeri positivi di un array iniziale.
+
+Esempio: `{-2, 5, 0, 7, -1}` -> `{5, 7}`
+
+---
+
+## Parte B - Array (intermedio)
+
+### 6) Secondo valore più grande
+Trova il secondo numero più grande in un array.
+
+Nota: considera il caso con valori duplicati.
+
+### 7) Verifica ordinamento
+Controlla se un array è ordinato in modo crescente.
+
+Output atteso: `True` o `False`.
+
+### 8) Rimuovi duplicati (senza `List`)
+Dato un array, crea un nuovo array con soli valori unici.
+
+Suggerimento: usa cicli annidati.
+
+### 9) Fusione di due array
+Unisci due array in uno solo.
+
+Bonus: crea anche la versione che unisce e ordina il risultato.
+
+### 10) Frequenza di un numero
+Dato un array e un numero `x`, conta quante volte `x` appare.
+
+---
+
+## Parte C - Liste (base)
+
+### 11) Lista della spesa
+Crea una `List(Of String)` e permetti di:
+- aggiungere un elemento,
+- rimuovere un elemento,
+- stampare tutta la lista.
+
+Bonus: evita inserimenti duplicati.
+
+### 12) Numeri casuali in lista
+Genera 10 numeri casuali e salvali in una `List(Of Integer)`.
+Stampa poi:
+- tutti i numeri,
+- il massimo,
+- il minimo.
+
+### 13) Filtra numeri maggiori di N
+Data una lista di interi e un valore `N`, crea una nuova lista con i soli valori maggiori di `N`.
+
+### 14) Somma e media lista
+Calcola somma e media dei valori presenti in una lista di `Double`.
+
+### 15) Ordina nomi
+Data una lista di nomi, ordinala alfabeticamente e stampala.
+
+Bonus: stampa anche in ordine inverso.
+
+---
+
+## Parte D - Liste (intermedio)
+
+### 16) Rubrica semplice
+Usa una `List(Of String)` con elementi nel formato `"Nome - Telefono"`.
+Permetti di:
+- aggiungere contatto,
+- cercare per nome,
+- eliminare contatto.
+
+### 17) Rimuovi tutti i negativi
+Data una `List(Of Integer)`, rimuovi tutti i numeri negativi.
+
+Attenzione: se rimuovi durante il ciclo, gestisci correttamente gli indici.
+
+### 18) Conta occorrenze in lista
+Dato un valore scelto dall'utente, conta quante volte appare nella lista.
+
+### 19) Merge di due liste senza duplicati
+Unisci due liste di interi in una terza lista senza valori ripetuti.
+
+### 20) Top 3 valori
+Data una lista di numeri, stampa i 3 valori più alti.
+
+Bonus: gestisci il caso in cui la lista abbia meno di 3 elementi.
+
+---
+
+## Sfide finali
+
+### Sfida 1) Statistiche complete
+Dato un insieme di numeri (array o lista), calcola:
+- somma,
+- media,
+- minimo,
+- massimo,
+- conteggio pari/dispari.
+
+### Sfida 2) Registro voti
+Gestisci una lista di voti scolastici.
+Funzionalità richieste:
+- inserisci voto,
+- mostra tutti i voti,
+- calcola media,
+- mostra voto più alto e più basso,
+- conta quanti voti sono sufficienti (`>= 6`).
+
+### Sfida 3) Conversione Array <-> Lista
+Parti da un array, convertilo in lista, modifica la lista (aggiunte/rimozioni), poi riconvertila in array e stampa il risultato finale.
+
+---
+
+## Extra didattico
+Per allenarti meglio, per ogni esercizio prova a scrivere:
+1. una versione con `For`,
+2. una versione con `For Each`,
+3. una versione con metodi della lista (`Add`, `Remove`, `Contains`, `Sort`).
