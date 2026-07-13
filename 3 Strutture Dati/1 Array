@@ -1,6 +1,9 @@
 Module Program
     Sub Main()      
 
+        ' Dichiarazione di un array di interi con dimensione fissa
+        Dim numbers(4) As Integer
+
         ' Dichiarazione e inizializzazione di un array di interi
         Dim arrayNumeri As Integer() = {1, 2, 3, 4, 5}
         Console.WriteLine("Array originale:")

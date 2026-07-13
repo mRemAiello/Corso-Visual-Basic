@@ -38,6 +38,40 @@ Module Program
             Console.WriteLine(numero)
         Next
 
+        ' Equivalente di break in Visual Basic
+        Console.WriteLine("Equivalente di break:")
+
+        ' Exit For
+        Console.WriteLine("Esempio Exit For:")
+        For x As Integer = 1 To 10
+            If x = 5 Then
+                Exit For
+            End If
+            Console.WriteLine(x)
+        Next
+
+        ' Exit While
+        Console.WriteLine("Esempio Exit While:")
+        Dim y As Integer = 1
+        While y <= 10
+            If y = 5 Then
+                Exit While
+            End If
+            Console.WriteLine(y)
+            y += 1
+        End While
+
+        ' Exit Do
+        Console.WriteLine("Esempio Exit Do:")
+        Dim z As Integer = 1
+        Do While z <= 10
+            If z = 5 Then
+                Exit Do
+            End If
+            Console.WriteLine(z)
+            z += 1
+        Loop
+
         Console.ReadKey()
         
     End Sub

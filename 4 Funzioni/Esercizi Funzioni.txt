@@ -1,0 +1,75 @@
+ESERCIZI SULLE FUNZIONI
+
+1. Crea una Sub chiamata Saluta che stampi a schermo il messaggio "Ciao, benvenuto nel programma!". Richiamala dal metodo Main.
+
+2. Crea una Sub chiamata StampaLinea che stampi una riga composta da 30 trattini. Richiamala tre volte dal metodo Main.
+
+3. Crea una Sub chiamata PresentaPersona che riceva come parametri nome ed eta di una persona e stampi una frase di presentazione.
+
+4. Crea una Sub chiamata StampaTabellina che riceva un numero intero e stampi la sua tabellina da 1 a 10.
+
+5. Crea una Function chiamata Somma che riceva due numeri interi e restituisca la loro somma. Stampa il risultato nel Main.
+
+6. Crea una Function chiamata Maggiore che riceva due numeri interi e restituisca il numero piu grande.
+
+7. Crea una Function chiamata EPari che riceva un numero intero e restituisca True se il numero e pari, False altrimenti.
+
+8. Crea una Function chiamata CalcolaAreaRettangolo che riceva base e altezza e restituisca l'area del rettangolo.
+
+9. Crea una Function chiamata CalcolaSconto che riceva il prezzo di un prodotto e la percentuale di sconto, quindi restituisca il prezzo finale scontato.
+
+10. Crea una Function chiamata GeneraNumeroCasuale che non riceva parametri e restituisca un numero casuale compreso tra 1 e 100.
+
+11. Crea una Function chiamata ContaVocali che riceva una parola e restituisca il numero di vocali presenti nella parola.
+
+12. Crea una Function chiamata InvertiSegno che riceva un numero intero e restituisca il suo opposto.
+
+13. Crea una Function chiamata CalcolaMedia che riceva tre voti decimali e restituisca la loro media. Nel Main, comunica se lo studente e promosso usando la soglia di 6.
+
+14. Crea una Sub chiamata StampaMenu che stampi un menu con le opzioni: somma, sottrazione, moltiplicazione, divisione ed esci.
+
+15. Realizza una piccola calcolatrice: usa una Function diversa per ogni operazione matematica e una Sub per stampare il risultato in modo ordinato.
+
+ESERCIZI DI DIFFICOLTA MEDIA
+
+16. Crea una Function chiamata Potenza che riceva una base e un esponente intero non negativo e restituisca il valore della potenza senza usare l'operatore di elevamento a potenza.
+
+17. Crea una Function chiamata Fattoriale che riceva un numero intero positivo e restituisca il suo fattoriale.
+
+18. Crea una Function chiamata MassimoArray che riceva un array di numeri interi e restituisca il valore piu grande contenuto nell'array.
+
+19. Crea una Function chiamata ContaOccorrenze che riceva un array di numeri interi e un valore da cercare, quindi restituisca quante volte quel valore compare nell'array.
+
+20. Crea una Function chiamata EPalindroma che riceva una parola e restituisca True se la parola si legge allo stesso modo da sinistra a destra e da destra a sinistra, False altrimenti.
+
+21. Crea una Function chiamata SommaCifre che riceva un numero intero positivo e restituisca la somma delle sue cifre.
+
+22. Crea una Function chiamata NumeroPrimo che riceva un numero intero e restituisca True se il numero e primo, False altrimenti.
+
+23. Crea una Sub chiamata StampaNumeriPrimi che riceva un limite massimo e stampi tutti i numeri primi compresi tra 2 e il limite, usando la Function NumeroPrimo.
+
+24. Crea una Function chiamata SecondoMaggiore che riceva un array di numeri interi e restituisca il secondo valore piu grande. Gestisci il caso in cui l'array contenga meno di due valori distinti.
+
+25. Crea una Function chiamata MediaPositivi che riceva un array di numeri interi e restituisca la media dei soli valori positivi. Gestisci il caso in cui non siano presenti valori positivi.
+
+ESERCIZI DI DIFFICOLTA ALTA
+
+26. Crea una Function ricorsiva chiamata Fibonacci che riceva un indice intero non negativo e restituisca il corrispondente numero della successione di Fibonacci.
+
+27. Crea una Function ricorsiva chiamata MCD che riceva due numeri interi positivi e restituisca il loro massimo comune divisore usando l'algoritmo di Euclide.
+
+28. Crea una Function chiamata ConvertiBinario che riceva un numero intero non negativo e restituisca la sua rappresentazione binaria come stringa. Non usare funzioni di conversione gia pronte.
+
+29. Crea una Function chiamata ComprimiTesto che riceva una stringa e restituisca una nuova stringa in cui ogni sequenza di caratteri uguali consecutivi e sostituita dal carattere seguito dal numero di ripetizioni. Esempio: "aaabbc" diventa "a3b2c1".
+
+30. Crea una Function chiamata ParentesiBilanciate che riceva un'espressione contenente parentesi tonde e restituisca True se tutte le parentesi sono correttamente aperte e chiuse nell'ordine giusto, False altrimenti.
+
+31. Crea una Function chiamata CercaSottosequenza che riceva due array di interi e restituisca True se il secondo array compare come sequenza consecutiva all'interno del primo.
+
+32. Crea una Function chiamata RuotaArrayDestra che riceva un array di interi e un numero di posizioni, quindi restituisca un nuovo array con gli elementi ruotati verso destra.
+
+33. Crea una Function chiamata VerificaSudoku che riceva una matrice 9 x 9 e restituisca True se ogni riga, colonna e riquadro 3 x 3 contiene i numeri da 1 a 9 senza ripetizioni.
+
+34. Crea una Function chiamata PercorsoMinimo che riceva una matrice di costi e restituisca il costo minimo per raggiungere l'angolo in basso a destra partendo dall'angolo in alto a sinistra, potendosi muovere soltanto a destra o in basso.
+
+35. Realizza un programma per la gestione di una rubrica. Crea funzioni separate per aggiungere un contatto, cercarlo per nome, modificarne il numero di telefono ed eliminarlo. Usa una struttura dati adatta per memorizzare i contatti.

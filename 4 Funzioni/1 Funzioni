@@ -1,4 +1,5 @@
 Module Program
+
     Sub Main()
         ' Esempio di funzione che non accetta parametri e non restituisce valori
         ' Saluta()
@@ -16,7 +17,7 @@ Module Program
 
         ' Esempio di funzione che restituisce un valore senza parametri
         Dim numeroCasuale As Integer = GeneraNumeroCasuale()
-        Console.WriteLine("Numero casuale: " & numeroCasuale)
+        Console.WriteLine("Numero casuale generato: " & numeroCasuale)
 
         Console.ReadKey()
     End Sub
@@ -33,7 +34,8 @@ Module Program
 
     ' Funzione che accetta parametri e restituisce un valore
     Function SommaNumeri(a As Integer, b As Integer) As Integer
-        Return a + b
+        Dim somma As Integer = a + b
+        Return somma
     End Function
 
     ' Funzione che restituisce un valore senza parametri
@@ -41,4 +43,5 @@ Module Program
         Dim random As New Random()
         Return random.Next(1, 101) ' Genera un numero casuale tra 1 e 100
     End Function
+
 End Module
