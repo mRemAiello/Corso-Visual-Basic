@@ -1,0 +1,65 @@
+Classe Veicolo
+Variabili:
+
+targa (Private, String)
+marca (Protected, String)
+modello (Protected, String)
+anno (Protected, Integer)
+chilometri (Protected, Double)
+Metodi:
+
+Costruttore che riceve targa, marca, modello e anno.
+AggiungiChilometri(km As Double) (Public): aggiorna i chilometri solo se il valore è positivo.
+GetTarga() (Public): restituisce la targa.
+GetDescrizione() (Public): restituisce marca, modello, anno, targa e chilometri.
+CalcolaCostoMensile() (Public, MustOverride): ogni tipo di veicolo calcola il proprio costo mensile.
+EseguireManutenzione() (Public, MustOverride): restituisce un messaggio relativo alla manutenzione necessaria.
+
+
+Classe AutoAziendale (deriva da Veicolo)
+Variabili:
+
+numeroPorte (Private, Integer)
+alimentazione (Private, String)
+Metodi:
+
+Costruttore che inizializza anche le informazioni specifiche.
+Override di CalcolaCostoMensile(): considera un costo base, il consumo in base ai chilometri e un eventuale supplemento per alimentazione.
+Override di EseguireManutenzione(): richiede manutenzione se sono stati superati 15.000 km dall'ultima manutenzione.
+
+
+Classe Furgone (deriva da Veicolo)
+Variabili:
+
+capacitaCarico (Private, Double)
+haRimorchio (Private, Boolean)
+Metodi:
+
+Costruttore che inizializza anche le informazioni specifiche.
+Override di CalcolaCostoMensile(): considera un costo base maggiore e un costo aggiuntivo proporzionale alla capacità di carico.
+Override di EseguireManutenzione(): richiede manutenzione ogni 10.000 km.
+
+
+Classe Flotta
+Variabile:
+
+Una collezione privata di oggetti Veicolo.
+Metodi:
+
+AggiungiVeicolo(v As Veicolo): inserisce un veicolo nella flotta, evitando targhe duplicate.
+RimuoviVeicolo(targa As String): elimina un veicolo cercandolo tramite targa.
+CalcolaCostoTotaleMensile(): restituisce la somma dei costi mensili di tutti i veicoli.
+MostraVeicoliDaManutenere(): stampa i veicoli che necessitano manutenzione.
+CercaPerTarga(targa As String): restituisce il veicolo corrispondente oppure Nothing.
+MostraRiepilogo(): stampa la descrizione e il costo mensile di ogni veicolo.
+
+
+Module Main
+Crea una flotta.
+Inserisci almeno due auto aziendali e due furgoni.
+Aggiungi chilometri diversi a ciascun veicolo.
+Prova ad aggiungere un veicolo con una targa già presente.
+Cerca un veicolo tramite targa.
+Mostra il riepilogo della flotta.
+Mostra il costo mensile totale.
+Mostra i veicoli che necessitano manutenzione.
