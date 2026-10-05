@@ -1,0 +1,69 @@
+Imports System.Drawing
+Imports System.Windows.Forms
+
+' Primo esempio: creazione di una finestra interamente da codice.
+' Per eseguirlo, creare un progetto Windows Forms in Visual Basic e sostituire
+' il contenuto del file principale con questo esempio.
+Module EsempioFinestra
+
+    <STAThread>
+    Sub Main()
+        Application.EnableVisualStyles()
+        Application.SetCompatibleTextRenderingDefault(False)
+        Application.Run(New FinestraSaluto())
+    End Sub
+
+End Module
+
+Public Class FinestraSaluto
+    Inherits Form
+
+    Private ReadOnly casellaNome As New TextBox()
+    Private ReadOnly etichettaRisultato As New Label()
+
+    Public Sub New()
+        Text = "Il mio primo programma con interfaccia grafica"
+        ClientSize = New Size(460, 220)
+        StartPosition = FormStartPosition.CenterScreen
+        FormBorderStyle = FormBorderStyle.FixedSingle
+        MaximizeBox = False
+
+        Dim etichettaNome As New Label() With {
+            .AutoSize = True,
+            .Location = New Point(30, 35),
+            .Text = "Come ti chiami?"
+        }
+
+        casellaNome.Location = New Point(30, 65)
+        casellaNome.Size = New Size(270, 23)
+
+        Dim pulsanteSaluta As New Button() With {
+            .Location = New Point(315, 63),
+            .Size = New Size(110, 28),
+            .Text = "Saluta"
+        }
+        AddHandler pulsanteSaluta.Click, AddressOf Saluta
+
+        etichettaRisultato.AutoSize = True
+        etichettaRisultato.Font = New Font(Font, FontStyle.Bold)
+        etichettaRisultato.Location = New Point(30, 125)
+        etichettaRisultato.Text = "Inserisci il tuo nome e premi Saluta."
+
+        Controls.AddRange({etichettaNome, casellaNome, pulsanteSaluta, etichettaRisultato})
+        AcceptButton = pulsanteSaluta
+    End Sub
+
+    Private Sub Saluta(sender As Object, e As EventArgs)
+        Dim nome As String = casellaNome.Text.Trim()
+
+        If nome = String.Empty Then
+            MessageBox.Show("Inserisci un nome.", "Dato mancante",
+                            MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            casellaNome.Focus()
+            Return
+        End If
+
+        etichettaRisultato.Text = $"Ciao, {nome}! Benvenuto nel corso."
+    End Sub
+
+End Class

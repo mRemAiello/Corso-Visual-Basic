@@ -1,0 +1,26 @@
+ESERCIZIO 2 - LISTA DELLE ATTIVITÀ
+
+Realizza un'applicazione Windows Forms per gestire una semplice lista di cose
+da fare.
+
+L'interfaccia deve contenere:
+- una TextBox per scrivere una nuova attività;
+- un pulsante "Aggiungi";
+- una ListBox che mostri tutte le attività;
+- un pulsante "Completa";
+- un pulsante "Elimina";
+- una Label che indichi quante attività sono ancora presenti.
+
+Requisiti:
+1. Non devono essere aggiunte attività vuote o composte da soli spazi.
+2. Se il testo non è valido, mostrare un messaggio e riportare il focus sulla
+   TextBox.
+3. "Elimina" deve chiedere conferma prima di rimuovere l'elemento selezionato.
+4. "Completa" deve anteporre il simbolo "✓" all'attività selezionata e non
+   deve modificare una voce già completata.
+5. Se non è selezionata alcuna voce, i pulsanti "Completa" ed "Elimina"
+   devono essere disabilitati.
+6. Il contatore deve aggiornarsi dopo ogni aggiunta o eliminazione.
+
+Bonus: aggiungere un pulsante "Salva" che scriva le attività in un file di
+testo e caricarle automaticamente al successivo avvio del programma.

@@ -1,0 +1,26 @@
+ESERCIZIO 1 - CONVERTITORE DI TEMPERATURA
+
+Realizza un'applicazione Windows Forms che converta una temperatura da gradi
+Celsius a gradi Fahrenheit e viceversa.
+
+L'interfaccia deve contenere:
+- una NumericUpDown per inserire la temperatura;
+- due RadioButton per scegliere la conversione;
+- un pulsante "Converti";
+- una Label nella quale visualizzare il risultato;
+- un pulsante "Azzera" che ripristini i valori iniziali.
+
+Formule:
+- Fahrenheit = Celsius * 9 / 5 + 32
+- Celsius = (Fahrenheit - 32) * 5 / 9
+
+Requisiti:
+1. All'avvio deve essere selezionata la conversione da Celsius a Fahrenheit.
+2. Il risultato deve essere mostrato con al massimo due cifre decimali e con
+   la corretta unità di misura.
+3. Il tasto Invio deve attivare il pulsante "Converti".
+4. Dopo avere premuto "Azzera", il controllo di inserimento deve ricevere
+   nuovamente il focus.
+
+Bonus: aggiorna automaticamente il risultato quando cambia la temperatura o
+la conversione selezionata, senza richiedere la pressione del pulsante.
