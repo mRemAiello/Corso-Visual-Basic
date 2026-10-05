@@ -1,0 +1,53 @@
+ESERCIZI SULLE DATE
+
+1. Stampa a schermo la data e l'ora attuali usando Date.Now.
+
+2. Crea una variabile di tipo Date con la tua data di nascita e calcola quanti anni hai oggi.
+
+3. Chiedi all'utente di inserire una data (giorno, mese, anno) e stampala nel formato "dd/MM/yyyy".
+
+4. Calcola quanti giorni mancano al prossimo Natale a partire dalla data odierna.
+
+5. Dato un anno inserito dall'utente, stampa se si tratta di un anno bisestile.
+
+6. Chiedi all'utente la sua data di nascita e stampa il giorno della settimana in cui e nato (es. Lunedi, Martedi...).
+
+7. Crea due date inserite dall'utente e stampa quale delle due e precedente e quale successiva.
+
+8. Calcola la differenza in giorni, ore e minuti tra due date/orari inseriti dall'utente.
+
+9. Aggiungi 100 giorni alla data odierna e stampa la nuova data ottenuta.
+
+10. Sottrai 6 mesi dalla data odierna e stampa la data risultante.
+
+11. Chiedi all'utente un numero di giorni e stampa la data che si otterra sommando quei giorni alla data attuale.
+
+12. Stampa il primo e l'ultimo giorno del mese corrente.
+
+13. Dato un mese e un anno inseriti dall'utente, stampa quanti giorni ha quel mese.
+
+14. Chiedi all'utente la data di scadenza di un documento e stampa se e ancora valido oppure scaduto rispetto alla data odierna.
+
+15. Crea un piccolo programma che calcoli l'eta esatta di una persona in anni, mesi e giorni, a partire dalla sua data di nascita.
+
+ESERCIZI DI DIFFICOLTA MEDIA
+
+16. Chiedi all'utente di inserire piu date di nascita (in un ciclo) e stampa quella della persona piu giovane e quella della persona piu anziana.
+
+17. Crea un programma che, data una data di inizio e una data di fine, stampi tutti i giorni compresi tra le due, uno per riga.
+
+18. Calcola quanti giorni lavorativi (dal lunedi al venerdi) ci sono tra due date inserite dall'utente.
+
+19. Chiedi all'utente una data di appuntamento e stampa un messaggio diverso a seconda che l'appuntamento sia oggi, nel passato o nel futuro.
+
+20. Crea un programma che calcoli tra quanti giorni cade il prossimo compleanno di una persona, dato il giorno e il mese di nascita.
+
+21. Dato un elenco di scadenze (date) inserite dall'utente, stampale in ordine cronologico dalla piu vicina alla piu lontana.
+
+22. Chiedi all'utente quante ore ha lavorato ogni giorno per una settimana, con relative date, e calcola il totale delle ore lavorate.
+
+23. Crea una piccola agenda: l'utente inserisce eventi con data e descrizione, e il programma stampa solo gli eventi futuri rispetto a oggi.
+
+24. Calcola quanti anni, mesi e giorni mancano a una data futura inserita dall'utente (ad esempio la data di laurea o di pensionamento).
+
+25. Dato un elenco di date di nascita, calcola l'eta media delle persone al giorno odierno.
