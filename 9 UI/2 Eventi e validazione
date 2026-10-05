@@ -1,0 +1,101 @@
+Imports System.Drawing
+Imports System.Windows.Forms
+
+' Secondo esempio: controlli, eventi e validazione dell'input.
+Module EsempioCalcolatrice
+
+    <STAThread>
+    Sub Main()
+        Application.EnableVisualStyles()
+        Application.SetCompatibleTextRenderingDefault(False)
+        Application.Run(New FinestraCalcolatrice())
+    End Sub
+
+End Module
+
+Public Class FinestraCalcolatrice
+    Inherits Form
+
+    Private ReadOnly primoNumero As New NumericUpDown()
+    Private ReadOnly secondoNumero As New NumericUpDown()
+    Private ReadOnly operazione As New ComboBox()
+    Private ReadOnly risultato As New Label()
+
+    Public Sub New()
+        Text = "Calcolatrice visuale"
+        ClientSize = New Size(420, 260)
+        StartPosition = FormStartPosition.CenterScreen
+
+        Dim pannello As New TableLayoutPanel() With {
+            .ColumnCount = 2,
+            .RowCount = 5,
+            .Dock = DockStyle.Fill,
+            .Padding = New Padding(25)
+        }
+        pannello.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 45))
+        pannello.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 55))
+
+        ConfiguraNumero(primoNumero)
+        ConfiguraNumero(secondoNumero)
+
+        operazione.DropDownStyle = ComboBoxStyle.DropDownList
+        operazione.Items.AddRange({"Somma", "Sottrazione", "Moltiplicazione", "Divisione"})
+        operazione.SelectedIndex = 0
+
+        Dim pulsanteCalcola As New Button() With {
+            .Text = "Calcola",
+            .AutoSize = True,
+            .Anchor = AnchorStyles.Left
+        }
+        AddHandler pulsanteCalcola.Click, AddressOf Calcola
+
+        risultato.AutoSize = True
+        risultato.Font = New Font(Font, FontStyle.Bold)
+        risultato.Text = "Risultato: --"
+
+        pannello.Controls.Add(New Label() With {.Text = "Primo numero", .AutoSize = True}, 0, 0)
+        pannello.Controls.Add(primoNumero, 1, 0)
+        pannello.Controls.Add(New Label() With {.Text = "Secondo numero", .AutoSize = True}, 0, 1)
+        pannello.Controls.Add(secondoNumero, 1, 1)
+        pannello.Controls.Add(New Label() With {.Text = "Operazione", .AutoSize = True}, 0, 2)
+        pannello.Controls.Add(operazione, 1, 2)
+        pannello.Controls.Add(pulsanteCalcola, 1, 3)
+        pannello.Controls.Add(risultato, 1, 4)
+
+        Controls.Add(pannello)
+        AcceptButton = pulsanteCalcola
+    End Sub
+
+    Private Shared Sub ConfiguraNumero(controllo As NumericUpDown)
+        controllo.Minimum = -100000D
+        controllo.Maximum = 100000D
+        controllo.DecimalPlaces = 2
+        controllo.Width = 150
+    End Sub
+
+    Private Sub Calcola(sender As Object, e As EventArgs)
+        Dim valore1 As Decimal = primoNumero.Value
+        Dim valore2 As Decimal = secondoNumero.Value
+        Dim valoreRisultato As Decimal
+
+        Select Case operazione.SelectedItem.ToString()
+            Case "Somma"
+                valoreRisultato = valore1 + valore2
+            Case "Sottrazione"
+                valoreRisultato = valore1 - valore2
+            Case "Moltiplicazione"
+                valoreRisultato = valore1 * valore2
+            Case "Divisione"
+                If valore2 = 0D Then
+                    MessageBox.Show("Non è possibile dividere per zero.", "Errore",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    secondoNumero.Focus()
+                    Return
+                End If
+                valoreRisultato = valore1 / valore2
+        End Select
+
+        risultato.Text = $"Risultato: {valoreRisultato}"
+    End Sub
+
+End Class
